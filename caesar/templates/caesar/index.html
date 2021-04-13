@@ -1,18 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-{#    <link rel="stylesheet" href="{% static 'caesar/css/styles.css' %}">#}
+    <link rel="stylesheet" href="{% static 'caesar/css/styles.css' %}">
     <title>Caesar decipher</title>
 </head>
 <body>
-<style>
-    .cipher-area {
-        min-width: 500px;
-    }
-</style>
     <div class="container">
         <div class="">
             <div class="text-center mt-5">
@@ -29,24 +25,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-{#    <script src="{% static 'caesar/js/main.js' %}"></script>#}
-    <script>
-        $(document).ready(function(){
-            $(".btn-decrypt").click(function(){
-                $.ajax({
-                    url: '/caesar-cipher-ajax',
-                    type: 'get',
-                    data: {
-                        decryption_text: $('#decryption_text').val()
-                    },
-                    success: function(response) {
-                        $("#decrypted_text").val(response.decrypted_text)
-                    }
-                })
-            })
-
-        })
-
-    </script>
+    <script src="{% static 'caesar/js/main.js' %}"></script>
 </body>
 </html>
