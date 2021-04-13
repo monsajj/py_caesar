@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'caesar/css/styles.css' %}">
+    <title>Caesar decipher</title>
+</head>
+<body>
+    <div class="container">
+        <div class="">
+            <div class="text-center mt-5">
+                <label for="decryption_text" class="col-12"> Type encrypted text here: </label>
+                <textarea id="decryption_text" class="cipher-area" placeholder="Type encrypted text here..."></textarea>
+            </div>
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-primary btn-lg btn-decrypt"> Decrypt </button>
+            </div>
+            <div class="text-center mt-5">
+                <textarea id="decrypted_text" class="cipher-area" readonly placeholder="Decrypted text"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let urlDecryptText = "{% url 'caesar:decipher' %}";
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'caesar/js/main.js' %}"></script>
+</body>
+</html>
