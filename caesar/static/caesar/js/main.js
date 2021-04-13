@@ -2,8 +2,7 @@ $(document).ready(function(){
 
     $(".btn-decrypt").click(function(){
         $.ajax({
-            // url: "{% url 'caesar:decipher' %}",
-            url: '/caesar-cipher-ajax',
+            url: urlDecryptText,
             type: 'get',
             data: {
                 decryption_text: $('#decryption_text').val()
