@@ -1,3 +1,4 @@
 .idea/*
 db.sqlite3
 caesar/__pycache__/*
+caesar/migrations/__pycache__/*
