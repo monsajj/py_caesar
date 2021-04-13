@@ -1,4 +1,3 @@
 .idea/*
 db.sqlite3
-caesar/__pycache__/*
-caesar/migrations/__pycache__/*
+__pycache__
